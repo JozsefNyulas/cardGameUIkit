@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cardGameUIkit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="SuperView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="F8T-tA-mWp" userLabel="backgroundImg">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="PLM-Ji-8YZ" userLabel="logoImg">
+                                <rect key="frame" x="126.66666666666669" y="64" width="122" height="67"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zGt-7z-tdd" userLabel="Cards and Btn Stack View">
+                                <rect key="frame" x="47.666666666666657" y="288.66666666666669" width="280" height="245.00000000000006"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="mi7-8C-YdV" userLabel="Cards StackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="170"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card14" translatesAutoresizingMaskIntoConstraints="NO" id="2o8-jr-NBC">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card13" translatesAutoresizingMaskIntoConstraints="NO" id="mY8-iY-3i0">
+                                                <rect key="frame" x="160" y="0.0" width="120" height="170"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0oJ-dL-6Ts" userLabel="DealBtn">
+                                        <rect key="frame" x="87" y="200" width="105.66666666666669" height="45"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q8J-gz-9AS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mfh-mT-zB7" userLabel="PlayerStackView">
+                                <rect key="frame" x="50.000000000000007" y="649" width="77.666666666666686" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gy8-zp-ndh" userLabel="PlayerLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="37"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM6-Gd-qw5" userLabel="ScorePlayerLbl">
+                                        <rect key="frame" x="0.0" y="42" width="77.666666666666671" height="37"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="25G-c9-rZj" userLabel="CpuStackView">
+                                <rect key="frame" x="280.33333333333331" y="649" width="44.666666666666686" height="79"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkU-iM-UOe" userLabel="CpuLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="44.666666666666664" height="37"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdv-8Q-J61" userLabel="ScoreCPULbl">
+                                        <rect key="frame" x="0.0" y="42" width="44.666666666666664" height="37"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F8T-tA-mWp" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="35r-fa-sE4"/>
+                            <constraint firstItem="25G-c9-rZj" firstAttribute="leading" secondItem="mfh-mT-zB7" secondAttribute="trailing" constant="152.66666666666669" id="7m4-af-GkD"/>
+                            <constraint firstItem="25G-c9-rZj" firstAttribute="bottom" secondItem="mfh-mT-zB7" secondAttribute="bottom" id="JX5-DE-sIG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="25G-c9-rZj" secondAttribute="trailing" constant="50" id="Ktg-OI-LYw"/>
+                            <constraint firstItem="F8T-tA-mWp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L7b-sf-e9w"/>
+                            <constraint firstItem="25G-c9-rZj" firstAttribute="height" secondItem="mfh-mT-zB7" secondAttribute="height" id="M7j-j3-FIg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mfh-mT-zB7" secondAttribute="bottom" constant="50" id="Oy3-8P-Eew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="F8T-tA-mWp" secondAttribute="top" id="PQt-uz-RQn"/>
+                            <constraint firstItem="F8T-tA-mWp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZYW-f8-yHQ"/>
+                            <constraint firstItem="PLM-Ji-8YZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="Zwr-9D-WFI"/>
+                            <constraint firstItem="zGt-7z-tdd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="eEY-Gz-u40"/>
+                            <constraint firstItem="zGt-7z-tdd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fNl-CU-kBF"/>
+                            <constraint firstItem="mfh-mT-zB7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="fcI-MM-WA1"/>
+                            <constraint firstItem="mfh-mT-zB7" firstAttribute="height" secondItem="25G-c9-rZj" secondAttribute="height" id="fmM-R5-2xc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="F8T-tA-mWp" secondAttribute="leading" id="i3J-OJ-FGb"/>
+                            <constraint firstItem="25G-c9-rZj" firstAttribute="centerY" secondItem="mfh-mT-zB7" secondAttribute="centerY" id="qJq-pR-7bU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="25G-c9-rZj" secondAttribute="bottom" constant="50" id="sOB-fq-onN"/>
+                            <constraint firstItem="25G-c9-rZj" firstAttribute="width" secondItem="mfh-mT-zB7" secondAttribute="width" multiplier="0.572519" id="tlw-C6-66F"/>
+                            <constraint firstItem="PLM-Ji-8YZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w3Q-6N-0Ow"/>
+                            <constraint firstItem="F8T-tA-mWp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="z72-cI-IvL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgViewLeft" destination="2o8-jr-NBC" id="Qky-yW-5AA"/>
+                        <outlet property="ingViewRight" destination="mY8-iY-3i0" id="nGZ-X2-vKl"/>
+                        <outlet property="labelCpuScore" destination="Hdv-8Q-J61" id="lET-FJ-e6w"/>
+                        <outlet property="labelPlayerScore" destination="DM6-Gd-qw5" id="6x9-tL-IBY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="85"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="414" height="896"/>
+        <image name="card13" width="120" height="170"/>
+        <image name="card14" width="120" height="170"/>
+        <image name="dealbutton" width="81.666664123535156" height="31"/>
+        <image name="logo" width="122" height="67"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
